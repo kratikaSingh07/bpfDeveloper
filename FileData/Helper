@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FileData
+{
+    public static class Helper
+    {
+        public static bool IsFileVersionExists(string firstArgument)
+        {
+            string[] versionArray = { "-v", "--v", "/v", "--version" };
+            return Array.IndexOf(versionArray, firstArgument) > -1 ? true : false;
+        }
+
+        public static bool IsFileSizeExists(string firstArgument)
+        {
+            string[] sizeArray = { "-s", "--s", "/s", "--size" };
+            return Array.IndexOf(sizeArray, firstArgument) > -1 ? true : false;
+        }
+
+        public static string GetPath(string[] args)
+        {
+            string version = args[0];
+            return args[0].Substring(args[0].IndexOf(version), version.Length);
+        }
+    }
+}
