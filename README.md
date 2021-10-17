@@ -1,3 +1,7 @@
+This repository is cloned from bpf-developer/DeveloperInterviewExercise
+It contains code changes relted to Task1 and Task2 mentioned in the exercise.
+FileData folder has 2 commits for these taks.
+
 # Developer Interview Exercise
 Interview exercise for C# developers
 
